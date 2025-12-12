@@ -1,0 +1,82 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme for Kormos
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 210 35% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 210 35% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 210 35% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 211 90% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 35% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 35% 20%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 211 90% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 35% 15%;
+    --input: 210 35% 15%;
+    --ring: 211 90% 51%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 35% 8%;
+
+    --sidebar-foreground: 0 0% 100%;
+
+    --sidebar-primary: 211 90% 51%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 211 90% 51%;
+
+    --sidebar-accent-foreground: 0 0% 100%;
+
+    --sidebar-border: 210 35% 15%;
+
+    --sidebar-ring: 211 90% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
